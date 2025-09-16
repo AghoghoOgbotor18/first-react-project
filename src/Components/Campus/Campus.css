@@ -1,0 +1,31 @@
+.campus{
+    margin: 80px auto;
+    width: 90%;
+    text-align:center;
+}
+.gallery{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    gap: 10px;
+}
+.gallery img{
+    width: 25%;
+    border-radius: 10px;
+}
+.gallery img:hover{
+    filter:grayscale(100%) brightness(1); /*grey filter when hover */
+}
+
+/* ----- Media Queries ---- */
+@media only screen and (max-width: 800px){
+    .gallery{
+        /* we want it to display two images per row */
+        flex-wrap: wrap;
+    }
+    .gallery img{
+        width: 48%; /* each image will take 48% of screen per column */
+        margin-bottom: 25px;
+    }
+}
